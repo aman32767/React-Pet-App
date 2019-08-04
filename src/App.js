@@ -1,33 +1,20 @@
 import React from 'react';
 import { render } from 'react-dom';
-import pet from './pet';
+import Pet from './Pet';
 class App extends React.Component {
   handelHeadingClick() {
     alert("ouuchhhh!!");
   }
   render() {
-    return React.createElement("div", {}, [
-      React.createElement(
-        "h1",
-        { onClick: this.handelHeadingClick },
-        "Adopted"
-      ),
-      React.createElement(pet, {
-        name: "Aman",
-        status: "1 backlog",
-        college: "Mait"
-      }),
-      React.createElement(pet, {
-        name: "rohan",
-        status: "harami",
-        college: "mau"
-      }),
-      React.createElement(pet, {
-        name: "pulkit",
-        status: "4th",
-        college: "msit"
-      })
-    ]);
+    return(
+      <div>
+        <h1 >Adopt Me!!!</h1>
+        <Pet name="Aman Sharma" status="Second Year" college="Maharaja Agrasen Institute Of Technology" />
+        <Pet name="Pulkit Gupta" status="Third Year" college="Maharaha Surajmal Institute Of Technology" />
+        <Pet name="Rohan Garg" status="Fourth Year" college="Bhagwan Pashuram Institute Of Technology" />
+
+      </div>
+    )
   }
 }
 render(React.createElement(App), document.getElementById("root"));

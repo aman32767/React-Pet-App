@@ -25748,7 +25748,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"pet.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"Pet.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25761,7 +25761,12 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Pet = function Pet(props) {
-  return _react.default.createElement("div", {}, [_react.default.createElement("h1", {}, props.name), _react.default.createElement("h1", {}, props.status), _react.default.createElement("h1", {}, props.college)]);
+  // return React.createElement("div", {}, [
+  //   React.createElement("h1", {}, props.name),
+  //   React.createElement("h1", {}, props.status),
+  //   React.createElement("h1", {}, props.college)
+  // ]);
+  return _react.default.createElement("div", null, _react.default.createElement("h1", null, props.name), _react.default.createElement("h2", null, props.status), _react.default.createElement("h2", null, props.college));
 };
 
 var _default = Pet;
@@ -25773,7 +25778,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = require("react-dom");
 
-var _pet = _interopRequireDefault(require("./pet"));
+var _Pet = _interopRequireDefault(require("./Pet"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25814,21 +25819,19 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {}, [_react.default.createElement("h1", {
-        onClick: this.handelHeadingClick
-      }, "Adopted"), _react.default.createElement(_pet.default, {
-        name: "Aman",
-        status: "1 backlog",
-        college: "Mait"
-      }), _react.default.createElement(_pet.default, {
-        name: "rohan",
-        status: "harami",
-        college: "mau"
-      }), _react.default.createElement(_pet.default, {
-        name: "pulkit",
-        status: "4th",
-        college: "msit"
-      })]);
+      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt Me!!!"), _react.default.createElement(_Pet.default, {
+        name: "Aman Sharma",
+        status: "Second Year",
+        college: "Maharaja Agrasen Institute Of Technology"
+      }), _react.default.createElement(_Pet.default, {
+        name: "Pulkit Gupta",
+        status: "Third Year",
+        college: "Maharaha Surajmal Institute Of Technology"
+      }), _react.default.createElement(_Pet.default, {
+        name: "Rohan Garg",
+        status: "Fourth Year",
+        college: "Bhagwan Pashuram Institute Of Technology"
+      }));
     }
   }]);
 
@@ -25836,7 +25839,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 (0, _reactDom.render)(_react.default.createElement(App), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./pet":"pet.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./Pet":"Pet.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
